@@ -28,7 +28,9 @@
             })
 
             .when('/sao', {
-                templateUrl: '../SAO/Views/index.php#/inicio',
+                redirectTo: function() {
+                  window.location = 'http://107.180.66.98/SAO/Views/index.php#/inicio';
+                }
                 //controllerAs: 'vm'
             })
 
