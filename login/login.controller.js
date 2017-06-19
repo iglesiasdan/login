@@ -43,7 +43,7 @@
                 if (response.success) {
                     console.log(vm.username);
                     AuthenticationService.SetCredentials(vm.username, vm.password);
-                    $location.path('http://107.180.66.98/SAO/Views/index.php#/estudios/');
+                    $location.path('../SAO/Views/index.php#/estudios/');
                 } else {
                     FlashService.Error(response.message);
                     vm.dataLoading = false;
