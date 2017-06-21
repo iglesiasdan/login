@@ -43,7 +43,7 @@
                 if (response.success) {
                     console.log(vm.username);
                     AuthenticationService.SetCredentials(vm.username, vm.password);
-                    $location.path('/sao');
+                    $location.path('/sao/');
                 } else {
                     FlashService.Error(response.message);
                     vm.dataLoading = false;
