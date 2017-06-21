@@ -29,8 +29,8 @@
 
             .when('/sao', {
                 redirectTo: function() {
-                  $rootScope.globals = $cookies.getObject('globals') || {};
-                  console.log($rootScope.globals);
+                  // $rootScope.globals = $cookies.getObject('globals') || {};
+                  // console.log($rootScope.globals);
                   window.location = 'http://107.180.66.98/SAO/Views/index.php#/inicio';
                 }
                 //controllerAs: 'vm'
