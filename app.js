@@ -6,8 +6,8 @@
         .config(config)
         .run(run);
 
-    config.$inject = ['$routeProvider', '$locationProvider','$cookies'];
-    function config($routeProvider, $locationProvider, $cookies) {
+    config.$inject = ['$routeProvider', '$locationProvider'];
+    function config($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
                 controller: 'HomeController',
@@ -29,6 +29,8 @@
 
             .when('/sao', {
                 redirectTo: function() {
+                  $rootScope.globals = $cookies.getObject('globals') || {};
+                  console.log($rootScope.globals);
                   window.location = 'http://107.180.66.98/SAO/Views/index.php#/inicio';
                 }
                 //controllerAs: 'vm'
