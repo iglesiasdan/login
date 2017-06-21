@@ -6,8 +6,8 @@
         .config(config)
         .run(run);
 
-    config.$inject = ['$routeProvider', '$locationProvider','$rootScope','$cookies'];
-    function config($routeProvider, $locationProvider,$rootScope, $cookies) {
+    config.$inject = ['$routeProvider', '$locationProvider','$cookies'];
+    function config($routeProvider, $locationProvider, $cookies) {
         $routeProvider
             .when('/', {
                 controller: 'HomeController',
